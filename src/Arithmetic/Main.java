@@ -1,16 +1,18 @@
 package Arithmetic;
 
+import Map.MyMap;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter first number: ");
-        Number n1 = sc.nextDouble();
+        Integer n1 = sc.nextInt();
         System.out.print("Enter second number: ");
-        Number n2 = sc.nextDouble();
+        Double n2 = sc.nextDouble();
 
-        Arithmetic result = new Arithmetic(n1, n2);
+        Arithmetic<Integer, Double> result = new Arithmetic<>(n1, n2);
 
         System.out.println("Addition: " + result.add());
         System.out.println("Subtraction: " + result.subtract());
